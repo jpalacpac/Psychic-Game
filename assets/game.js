@@ -28,15 +28,21 @@ var userChoice = null;
  var compChoice = letterChoices[Math.floor(Math.random() * letterChoices.length)];
  console.log( "Computer picks " + compChoice );
 
-
+//waits for key pressed
 document.onkeyup = function(event) {
 
 var userChoice = event.key
 console.log(userChoice);
 
+
+// prevents the user from being deducted guess points if the same letter is pressed
+// deducts guesses when a new letter is pressed that is not the letter computer has chosem
+// alerts user to choose different letter
 if (guessedLetters.indexOf(userChoice) < 0 && letterChoices.indexOf(userChoice) >= 0) {
 		guessedLetters[guessedLetters.length] = userChoice;
 		guessesLeft--;
+} else {
+	alert("Stop picking the same letter, Human.")
 }
 
 // if the user guesses the same letter chosen by the computer, the user wins the round
