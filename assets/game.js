@@ -24,7 +24,7 @@ var guessedLetters = [];
 var userChoice = null;
 
 
-
+alert("Press a letter to begin guessing, Human.");
 
 //create a formula that makes the computer randomly choose a letter
  var compChoice = letterChoices[Math.floor(Math.random() * letterChoices.length)];
@@ -68,6 +68,7 @@ if (guessesLeft === 0) {
 		compChoice = letterChoices[Math.floor(Math.random() * letterChoices.length)];
 		console.log("New Pick " + compChoice);
 	}
+
 
 console.log("wins: " + wins + " losses: " + losses + " Guesses Left: " + guessesLeft);
 
