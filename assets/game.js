@@ -18,6 +18,8 @@
 var wins = 0;
 var losses = 0;
 var guessesLeft = 9;
+
+// Displays the
 var guessedLetters = [];
 var userChoice = null;
 
@@ -34,10 +36,10 @@ document.onkeyup = function(event) {
 var userChoice = event.key
 console.log(userChoice);
 
-
-// prevents the user from being deducted guess points if the same letter is pressed
-// deducts guesses when a new letter is pressed that is not the letter computer has chosem
-// alerts user to choose different letter
+// adds the players guesses to display in the guessedLetters array if its not the letter compChoice picked.
+// prevents the user from being deducted from guessesLeft if the same letter is pressed.
+// deducts guessesLeft when a new letter is pressed that is not the letter computer has chosem.
+// alerts user to choose different letter.
 if (guessedLetters.indexOf(userChoice) < 0 && letterChoices.indexOf(userChoice) >= 0) {
 		guessedLetters[guessedLetters.length] = userChoice;
 		guessesLeft--;
