@@ -38,12 +38,13 @@ document.onkeyup = function(event) {
 	console.log(userChoice);
 
 	// adds the players guesses to display in the guessedLetters array if its not the letter compChoice picked.
-	// prevents the user from being deducted from guessesLeft if the same letter is pressed.
+	// prevents the user from being deducted guessesLeft if the same letter is pressed.
 	// deducts guessesLeft when a new letter is pressed that is not the letter computer has chosem.
-	// alerts user to choose different letter.
+	// alerts user to choose different letter is same letter is pressed.
 	if (guessedLetters.indexOf(userChoice) < 0 && letterChoices.indexOf(userChoice) >= 0) {
 			guessedLetters[guessedLetters.length] = userChoice;
 			guessesLeft--;
+	    
 	    } else {
 			alert("Stop picking the same letter, Human.")
 	    }
